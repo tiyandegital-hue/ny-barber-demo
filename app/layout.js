@@ -86,6 +86,12 @@ export default function RootLayout({ children }) {
             </p>
           </div>
         </footer>
+        {/* Sticky mobile booking bar: phones only (hidden on desktop via CSS).
+            Body bottom padding on phones keeps footer content from hiding behind it. */}
+        <div className="mobile-book-bar" role="navigation" aria-label="Quick booking">
+          <a className="btn btn-primary" href="/booking">Book a chair</a>
+          <a className="btn btn-ghost" href={SHOP.phoneHref}>Call {SHOP.phone}</a>
+        </div>
       </body>
     </html>
   );

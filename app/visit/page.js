@@ -125,6 +125,49 @@ export default function VisitPage() {
           </div>
         </section>
       </Reveal>
+      <Reveal>
+        <section className="section" id="faq">
+          <div className="section-head">
+            <p className="eyebrow">Questions, answered</p>
+            <h2 className="display">Good to know.</h2>
+            <p>Only verified facts — hours, durations, and the demo note, nothing invented.</p>
+          </div>
+          <div className="faq">
+            <div className="faq-item">
+              <h3>What are the hours?</h3>
+              <p>
+                Mon–Thu 9 AM–7 PM, Fri 9 AM–5 PM, Sun 10 AM–5 PM. The shop is closed on
+                Saturdays, so the booking form never offers one.
+              </p>
+            </div>
+            <div className="faq-item">
+              <h3>How long does each service take?</h3>
+              <p>
+                From the shop&apos;s public menu: haircut 20 minutes, skin fade 30, shave 20,
+                beard trim 20, haircut &amp; beard 40, the full service 60.
+              </p>
+            </div>
+            <div className="faq-item">
+              <h3>Do demo bookings create a real appointment?</h3>
+              <p>
+                No. This is a concept redesign demo: demo bookings create no appointment and
+                nothing is stored. To book for real, call <a href={SHOP.phoneHref}>{SHOP.phone}</a>.
+              </p>
+            </div>
+            <div className="faq-item">
+              <h3>Where is the shop?</h3>
+              <p>
+                <strong>{SHOP.address}</strong> — Midtown Manhattan, near Herald Square, Bryant
+                Park, and Fifth Avenue.{' '}
+                <a href={SHOP.mapsUrl} target="_blank" rel="noreferrer">Get directions on Google Maps</a>.
+              </p>
+            </div>
+          </div>
+          <p style={{ marginTop: 28 }}>
+            <a className="btn btn-primary" href="/booking">Book a chair (demo)</a>
+          </p>
+        </section>
+      </Reveal>
     </div>
   );
 }

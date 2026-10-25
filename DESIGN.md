@@ -5,7 +5,7 @@
 - **Pain:** rushed chairs, a fade that falls apart in a week, a station that does not look clean.
 - **One action:** book a chair (or, if he prefers a human, call the shop).
 - **Trust gap:** is this a real shop with real prices, or a pretty template? Closed by real address, real phone, real hours, exact prices, and an honest demo label.
-- **Emotion:** craft, unhurried, sharp. Brass on dark glass; one 3D peak (the barber pole); everything else quiet.
+- **Emotion:** craft, unhurried, sharp. Brass on dark glass; photo-led hero, 3D pole as a craft accent; everything else quiet.
 
 ## Tokens (semantic, one-voltage rule) — MODERN DARK GLASS restyle, 2026-10-25
 Replaces the flat warm-paper theme (canvas #F6F2EA, ink #121110, 4px radius ceiling, no
@@ -37,15 +37,34 @@ is the only chromatic CTA color, headlines ≤2 lines, phone is a second composi
 - Max 2 typefaces. Body 16–18px, never below 14px. Measure 50–80 chars.
 
 ## Layout idea
-Editorial barbershop: oversized display type as composition, asymmetric split hero (type left, live 3D pole right),
-numbered service menu like a printed price board, one live thing per page (pole on Home, filters on Services,
-dynamic form on Booking). Phone is a second composition: 16–20px margins, ≥44px targets, stacked sections.
+Editorial barbershop, research-driven (see NICHE-RESEARCH.md, 2026-10-25): photo-led hero
+(real photo + scrim + motto + dual CTA), gallery strip, menu-board services, first-visit
+reassurance, one live thing per page (pole as craft accent on Home, filters on Services,
+dynamic form on Booking). Phone is a second composition: 16–20px margins, ≥44px targets,
+stacked sections, sticky bottom booking bar.
+
+## Research-driven redesign (2026-10-25 — from NICHE-RESEARCH.md, Tanjir's niche-first rule)
+Dark glass tokens UNCHANGED (niche-confirmed: dark + brass is the barbershop premium
+register). Structure changed to the niche's winning shape:
+- Home hero is now photography-led (licensed Commons cutting photo + scrim, headline "A
+  sharp cut in Midtown, taken slowly." — place-specific, no superlative). The 3D pole is
+  demoted to a smaller craft accent block lower on Home — still animated, still Three.js.
+- Sticky mobile booking bar (phones only): Book a chair + tap-to-call, fixed bottom with
+  body bottom padding so footer content is never hidden. Desktop: no bar (header suffices).
+- Home adds a photo gallery strip (all 5 licensed photos, dark glass section), a
+  "First visit?" reassurance block (verified facts only — no consultation-style welcome
+  claimed, no walk-in policy stated), and repeated booking CTAs (after gallery + at end).
+- Services page is now a menu board: groups by category with a photo header per category,
+  dotted-leader rows (name + honest description + price + duration), each row linking to
+  /booking. Filter chips kept.
+- Visit page adds an FAQ block answering only verified questions (hours, durations, demo
+  bookings create no appointment, address). No walk-ins claim, no staff, awards, reviews,
+  or testimonials anywhere — deliberately NOT adopted per the honesty law.
 
 ## Section map (multipage, 7 pages)
-- / Home: hero (pole + promise + Book CTA) → trust strip (real address/hours/phone/prices) → services preview
-  → how a visit works (consult → cut → finish) → photo break → ending CTA.
-- /services: full menu, filter chips (Cut / Shave / Beard / Full service), price + duration + inclusions, data from /api/services.
-- /visit: about (paraphrased positioning), hours table, Midtown context (near Herald Square / Bryant Park / Fifth Avenue), what to expect, phone CTA.
+- / Home: photo-led hero (photo + scrim + place headline + dual CTA) → trust strip (real address/hours/phone/prices) → gallery strip → services preview → how a visit works → first-visit reassurance (verified facts only) → craft accent (3D pole, demoted) → ending CTA.
+- /services: menu board grouped by category with photo headers, filter chips (Cut / Shave / Beard / Full service), dotted-leader rows with price + duration + inclusions, each row links to /booking; data from /api/services.
+- /visit: about (paraphrased positioning), hours table, Midtown context (near Herald Square / Bryant Park / Fifth Avenue), what to expect, photo gallery, FAQ (verified questions only), phone CTA.
 - /booking: dynamic form — service auto-fills price + duration; no past dates; Saturdays disabled (shop closed);
   times only inside that day's real hours; consent checkbox required; POST /api/book returns reference; nothing stored.
 - /contact: form → POST /api/contact; real address/phone/hours shown.
