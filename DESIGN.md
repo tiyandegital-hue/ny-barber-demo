@@ -5,17 +5,31 @@
 - **Pain:** rushed chairs, a fade that falls apart in a week, a station that does not look clean.
 - **One action:** book a chair (or, if he prefers a human, call the shop).
 - **Trust gap:** is this a real shop with real prices, or a pretty template? Closed by real address, real phone, real hours, exact prices, and an honest demo label.
-- **Emotion:** craft, unhurried, sharp. Brass on warm paper; one 3D peak (the barber pole); everything else quiet.
+- **Emotion:** craft, unhurried, sharp. Brass on dark glass; one 3D peak (the barber pole); everything else quiet.
 
-## Tokens (semantic, one-voltage rule)
-- canvas (page bg): #F6F2EA — warm paper
-- surface: #FFFFFF (cards on paper use #EFE9DC instead — no shadows)
-- ink: #121110 (near-black, never pure #000)
-- body: #2A2724
-- muted: #5F5952 (checked ≥ 4.5:1 on paper)
-- hairline: #D8D0BF
-- accent (ONLY chromatic CTA color): brass #B08D3E — buttons carry ink text on brass (≈6:1)
-- No gradients, no shadows. Radius ceiling 4px. Hairline borders only.
+## Tokens (semantic, one-voltage rule) — MODERN DARK GLASS restyle, 2026-10-25
+Replaces the flat warm-paper theme (canvas #F6F2EA, ink #121110, 4px radius ceiling, no
+shadows/gradients) — the user judged that look "primitive / old-era" and asked for a modern
+glassmorphism vibe. Content, copy, prices, hours, routes, and APIs are unchanged; this is
+a pure visual restyle. The 4px radius ceiling is INTENTIONALLY replaced by the glass
+language below (larger radii are part of how glass reads); everything else from the
+master skill's restraint rules still holds (2 glow colors max, one shadow tier, brass
+is the only chromatic CTA color, headlines ≤2 lines, phone is a second composition).
+- canvas (page bg): deep cool-neutral ink #0C0E12 (never pure #000), with 2 fixed ambient
+  radial glows at low opacity — brass/amber + desaturated slate-blue — as atmosphere only.
+- glass surfaces: translucent dark fills rgba(255,255,255,0.06–0.07), backdrop-filter
+  blur(16px) saturate(140%), 1px borders rgba(255,255,255,0.16–0.22), one soft shadow tier
+  (0 16px 40px rgba(0,0,0,0.32)) + inset top highlight rgba(255,255,255,0.10). Radius 18px
+  cards / 20px pole stage / 16px tiles & steps / 12px buttons & fields; chips stay pills.
+- ink (headings): #F2F0EB near-white; body: #E9E6DF; muted: #B9B7B0 (no darker on dark
+  glass — WCAG AA holds; body text never sits directly over a busy photo or glow without
+  a scrim/glass panel behind it).
+- accent (ONLY chromatic CTA color): brass #B08D3E — solid buttons with ink text; ghost
+  buttons are glass. Sticky header is frosted glass (translucent dark + blur + hairline).
+- Demo banner stays prominent: solid dark-bronze #20180A + brass bottom border + bold
+  brass links — never faded for aesthetics.
+- No gradients beyond the 2 ambient glows. Blur is never applied to moving elements
+  (static panels + sticky header only); GSAP reveals and reduced-motion behavior unchanged.
 
 ## Type
 - Display: Anton (self-hosted woff2, latin) — headlines, never more than 2 lines at any width.
